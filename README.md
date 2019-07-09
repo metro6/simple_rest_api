@@ -11,3 +11,15 @@
 
 ---
 Список зависимостей лежит в requirements.txt в корне проекта
+---
+Тестовый сервер:
+
+http://simplerestapi.ml/admin
+
+login 'test'
+
+password 'test'
+
+---
+Все запросы можно потрогать здесь
+https://documenter.getpostman.com/view/7588968/SVSEtr7C?version=latest
