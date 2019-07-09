@@ -27,7 +27,14 @@ def get_authors(request):
     return Response({'authors': serializer.data}, status=200)@api_view(['GET'])
 
 
+
 @api_view(['GET'])
 def get_author(request, id):
     serializer = AuthorSerializer(Author.objects.filter(pk=id), many=True)
-    return Response({'authors': serializer.data}, status=200)
+    return Response({'authors': serializer.data}, status=200)@api_view(['GET'])
+
+
+@api_view(['GET'])
+def get_author_books(request, id):
+    serializer = BookSerializer(Book.objects.filter(author__pk=id), many=True)
+    return Response({'books': serializer.data}, status=200)
