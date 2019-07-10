@@ -1,0 +1,8 @@
+-extends "base.pug"
+-load staticfiles i18n
+-block content
+    if book
+        p Описание книги {{book.name}}
+        p Автор:
+            a(href="/authors/{{book.author.pk}}/")
+                {{book.author}}

@@ -1,0 +1,10 @@
+-extends "base.pug"
+-load staticfiles i18n
+-block content
+    if author
+        {{author.name}}
+        p Произведения автора
+        ul
+            for book in books
+                li
+                    a(href="http://{{book.url}}/") {{book.name}}

@@ -1,0 +1,9 @@
+-extends "base.pug"
+-load staticfiles i18n
+-block content
+    p Список всех книг
+    books
+        for book in books
+            .book
+                a(href="/books/{{book.pk}}/")
+                    {{book.name}} ({{book.author}})

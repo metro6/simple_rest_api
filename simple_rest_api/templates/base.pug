@@ -1,0 +1,19 @@
+-load staticfiles i18n
+html
+  head
+      script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+      script(src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js")
+      script(src="{% static 'js/main.js' %}")
+      link(rel="stylesheet", type="text/css", href="{% static 'css/css.css' %}")
+  body
+    header
+      a(href="http://{{ request.META.HTTP_HOST }}/")
+          p http://simplerestapi.ml/
+    -block content
+    -endblock
+
+
+    footer
+        span Mikhail Tareykin
+        span mi6827@gmail.com
+        span 2019
